@@ -11,7 +11,7 @@
     <p style='color:white;'>No sos tramposa, pero aún así te aclaro que no inspecciones el código 😅</p>
     <br>
     <div class='game-line'>
-        <button class='hint-button'>!</button>
+        <button id='0' class='hint-button'>!</button>
         <input id='3' class='game-square key-square' type='text' autofocus>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
@@ -22,14 +22,14 @@
         <input class='game-square' type='text'>
     </div>
     <div class='game-line'>
-        <button class='hint-button'>!</button>
+        <button id='1' class='hint-button'>!</button>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
         <input id='11' class='game-square key-square' type='text'>
     </div>
     <div class='game-line'>
-        <button class='hint-button'>!</button>
+        <button id='2' class='hint-button'>!</button>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
@@ -39,7 +39,7 @@
         <input class='game-square' type='text'>
     </div>
     <div class='game-line'>
-        <button class='hint-button'>!</button>
+        <button id='3' class='hint-button'>!</button>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
         <input id='4' class='game-square key-square' type='text'>
@@ -49,7 +49,7 @@
         <input class='game-square' type='text'>
     </div>
     <div class='game-line'>
-        <button class='hint-button'>!</button>
+        <button id='4' class='hint-button'>!</button>
         <input class='game-square' type='text'>
         <input id='9' class='game-square key-square' type='text'>
         <input class='game-square' type='text'>
@@ -62,14 +62,14 @@
         <input class='game-square' type='text'>
     </div>
     <div class='game-line'>
-        <button class='hint-button'>!</button>
+        <button id='5' class='hint-button'>!</button>
         <input class='game-square' type='text'>
         <input id='2' class='game-square key-square' type='text'>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
     </div>
     <div class='game-line'>
-        <button class='hint-button'>!</button>
+        <button id='6' class='hint-button'>!</button>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
@@ -80,7 +80,7 @@
         <input class='game-square' type='text'>
     </div>
     <div class='game-line'>
-        <button class='hint-button'>!</button>
+        <button id='7' class='hint-button'>!</button>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
@@ -89,7 +89,7 @@
         <input class='game-square' type='text'>
     </div>
     <div class='game-line'>
-        <button class='hint-button'>!</button>
+        <button id='8' class='hint-button'>!</button>
         <input id='7' class='game-square key-square' type='text'>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
@@ -102,7 +102,7 @@
         <input id='12' class='game-square key-square' type='text'>
     </div>
     <div class='game-line'>
-        <button class='hint-button'>!</button>
+        <button id='9' class='hint-button'>!</button>
         <input id='13' class='game-square key-square' type='text'>
         <input class='game-square' type='text'>
         <input class='game-square' type='text'>
@@ -165,6 +165,24 @@
         border-radius: 6px;
     }
 </style>
+<script>
+    var hintsList = [
+        'La segunda palabra del nombre de nuestra estación.',
+        'El lugar de nuestra primera salida.',
+        'Donde (aunque no tan físico) nos conocimos.',
+        'La calle de nuestro primer beso.',
+        '(Café)tería tradicional nuestra.',
+        'El primer regalo de todos.',
+        'El gusto que nos unió más en la fiesta de Acámica (plural).',
+        'Lo primero que te interesó mucho de mí y me pediste tener (plural).',
+        'El mes de nuestra primera salida.',
+        '(La que por lo menos yo considero) nuestra canción.'
+    ];
+
+    $('.hint-button').on('click', function() {
+        return alert(hintsList[parseInt($(this).attr('id'))]);
+    });
+</script>
 <script>
     var _0x556f=['keyup','prev','maxlength','.key-square','15333QWIQaF','670008ajwlrV','226qlLOKI','44990jRIWnm','365335KqxwPb','463Ivrdjw','97MXBMyw','31tRtiPq','val','focus','742CsDuHS','.finished-square:eq(','maxLength','34gccOSV','2IDClTF','value','7343vGyAzO','length','.game-square','attr','.finished-square'];var _0x41b52f=_0x4189;(function(_0x36d4bf,_0x49631f){var _0x42fb99=_0x4189;while(!![]){try{var _0x5e792c=parseInt(_0x42fb99(0xf6))*-parseInt(_0x42fb99(0x100))+parseInt(_0x42fb99(0x10c))+parseInt(_0x42fb99(0xf8))*parseInt(_0x42fb99(0xfc))+-parseInt(_0x42fb99(0xf7))*-parseInt(_0x42fb99(0xf4))+-parseInt(_0x42fb99(0xf9))*-parseInt(_0x42fb99(0x10b))+parseInt(_0x42fb99(0xf5))+parseInt(_0x42fb99(0x102))*-parseInt(_0x42fb99(0xff));if(_0x5e792c===_0x49631f)break;else _0x36d4bf['push'](_0x36d4bf['shift']());}catch(_0x57c3d8){_0x36d4bf['push'](_0x36d4bf['shift']());}}}(_0x556f,0x5e629));var validAnswers=['l','u','c','e','r','o','s','d','e','m','i','e','l'],validCheck=0x0;function checkVictory(){var _0x1ad1f7=_0x4189;validCheck=0x0;for(let _0x1e24e6=0x0;_0x1e24e6<validAnswers[_0x1ad1f7(0x103)];_0x1e24e6++){$('.finished-square:eq('+_0x1e24e6+')')[_0x1ad1f7(0xfa)]()==validAnswers[_0x1e24e6]&&validCheck++;}if(validCheck==0xd)return alert('Felicitaciones,\x20descifraste\x20la\x20contraseña!\x20No\x20esperaba\x20menos\x20de\x20vos,\x20Valeria\x20Eliana.');}function _0x4189(_0x3d5848,_0x4b2c51){_0x3d5848=_0x3d5848-0xf4;var _0x556f45=_0x556f[_0x3d5848];return _0x556f45;}$(_0x41b52f(0x104))[_0x41b52f(0x105)](_0x41b52f(0x109),'1'),$(_0x41b52f(0x106))[_0x41b52f(0x105)]('disabled',!![]),$(_0x41b52f(0x104))['on'](_0x41b52f(0x107),function(){var _0x37a338=_0x41b52f;this[_0x37a338(0x101)][_0x37a338(0x103)]==this[_0x37a338(0xfe)]&&$(this)['next'](_0x37a338(0x104))[_0x37a338(0xfb)](),this[_0x37a338(0x101)]['length']==0x0&&$(this)[_0x37a338(0x108)](_0x37a338(0x104))[_0x37a338(0xfb)]();}),$(_0x41b52f(0x10a))['on'](_0x41b52f(0x107),function(){var _0x352459=_0x41b52f;if(this['value'][_0x352459(0x103)]==this[_0x352459(0xfe)]){let _0x255ab6=parseInt($(this)[_0x352459(0x105)]('id'))-0x1;$(_0x352459(0xfd)+_0x255ab6+')')[_0x352459(0xfa)]($(this)[_0x352459(0xfa)]());}checkVictory();});
 </script>
